@@ -1,0 +1,50 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 50%;
+    height: 50vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.parent {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1 rgba(0, 0, 0, 0.5);
+}
+
+.children {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: all 1.1s ease;
+}
+
+.bg-1{
+    background-image: url(https://picsum.photos/300/200/?blur=1);
+}
+.bg-2{
+    background-image: url(https://picsum.photos/300/200?blur=2);
+}
+.bg-3{
+    background-image: url(https://picsum.photos/300/200/?blur=3);
+}
+.bg-4{
+    background-image: url(https://picsum.photos/300/200?blur=4);
+}
+
+.parent:hover .children {
+    transform: scale(1.2);
+}
