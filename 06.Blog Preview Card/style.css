@@ -1,0 +1,121 @@
+body{
+    padding: 0;
+    margin: 0 auto;
+    background-color: #F4D04E;
+    font-family: 'JetBrains Mono', Courier, monospace;
+}
+
+p, span {
+    margin: 0;
+    line-height: 150%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 384px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: #fff;
+    box-shadow: 8px 5px 0 black;
+}
+
+.card .card__media {
+    width: 100%;
+    padding: 24px;
+}
+
+.card .card__media img {
+    width: 336px;
+    max-height: 200px;
+    object-fit: fill;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .card__content {
+    padding:  0 24px;
+    width: calc(384px - 24px -24px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card .card__content .card__content-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card .card__content .card__content-subtitle span {
+    background-color: #F4D04E;
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.card .card__content .card__content-subtitle p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card .card__content .card__content-title p{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.card .card__content > p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #7F7F7F;
+}
+
+.card .card__info {
+    padding: 24px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+}
+
+.card .card__info img {
+    width: 32px;
+    height: 32px;
+}
+
+.card .card__info span {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+/* For Mobile Devices – 320px — 480px. */
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: 327px;
+    }
+
+    .card .card__media img {
+        width: 279px;
+    }
+
+    .card .card__content .card__content-subtitle span,
+    .card .card__content .card__content-subtitle p {
+        font-size: 12px;
+    }
+
+    .card .card__content .card__content-title p {
+        font-size: 20px;
+    }
+    .card .card__content > p {
+        font-size: 14px;
+    }
+}
