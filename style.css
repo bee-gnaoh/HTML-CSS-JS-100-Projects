@@ -1,0 +1,62 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'JetBrains Mono', Courier, monospace;
+}
+
+p, span {
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.projects > div{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects > div img {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+}
+
+.projects > div p{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.projects > div a {
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    background-color: #F4D04E;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
