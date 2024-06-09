@@ -30,4 +30,9 @@ const data = [
         title: 'Blog Preview Card',
         preview: 'preview.jpeg'
     },
+    {
+        path: './07_Results_Summary_Component',
+        title: 'Results Summary Component',
+        preview: 'preview.jpeg'
+    },
 ]
