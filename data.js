@@ -33,6 +33,11 @@ const data = [
     {
         path: './07_Results_Summary_Component',
         title: 'Results Summary Component',
-        preview: 'preview.jpeg'
+        preview: 'preview.jpg'
+    },
+    {
+        path: './08_QR_Code_Component',
+        title: 'QR Code Component',
+        preview: 'preview.jpg'
     },
 ]
