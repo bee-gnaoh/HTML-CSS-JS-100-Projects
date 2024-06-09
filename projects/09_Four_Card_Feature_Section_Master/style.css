@@ -84,6 +84,7 @@ main {
 .header .header__title-2 {
     font-size: 36px;
     font-weight: 600;
+    color: var(--color-very-dark-blue);
 }
 
 .header .header__subtitle {
