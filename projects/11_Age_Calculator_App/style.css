@@ -19,7 +19,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: var(--color-light-grey);
+    background-color: var(--color-off-white);
     overflow: scroll;
 }
 
@@ -50,7 +50,7 @@ main {
 
 .container {
     width: 840px;
-    background-color: var(--color-off-white);
+    background-color: var(--color-white);
     border-radius: 15px;
     border-bottom-right-radius: 25%;
     padding: 56px;
