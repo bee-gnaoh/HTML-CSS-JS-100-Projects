@@ -49,4 +49,9 @@ const data = [
     title: 'Intro Component With Signup Form',
     preview: 'preview.jpg',
   },
+  {
+    path: '/11_Age_Calculator_App',
+    title: 'Age Calculator App',
+    preview: 'preview.jpg',
+  },
 ];
