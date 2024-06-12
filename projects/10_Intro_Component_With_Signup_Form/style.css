@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* primary */
+    --color-red: hsl(0, 100%, 74%);
+    --color-light-green: hsl(154, 65%, 68%);
+    --color-green: hsl(154, 59%, 51%);
+    --color-dark-green: hsl(150, 35%, 51%);
+
+    /* Accent */
+    --color-blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --color-dark-blue: hsla(249, 10%, 26%, 0.3);
+    --color-grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--color-red);
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+br {
+    display: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 165px;
+    place-items: center;
+}
+
+.container .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.container .left-section h1 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 1.1em;
+    font-weight: 700;
+}
+
+.container .left-section>p {
+    color: #fff;
+    line-height: 1.75em;
+}
+
+.container .right-section {
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+.container .right-section .try-section {
+    width: 100%;
+    height: 58px;
+    background-color: var(--color-blue);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 7px var(--color-dark-blue);
+
+}
+
+.container .right-section .try-section>p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.container .right-section .try-section>p>span {
+    font-weight: 600;
+}
+
+.container .right-section form {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px var(--color-dark-blue);
+}
+
+form .input-wrapper {
+    width: 100%;
+}
+
+form .input-wrapper>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-dark-blue);
+    border-radius: 5px;
+    height: 58px;
+    padding: 0 30px;
+}
+
+form .input-wrapper img {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
+form .input-wrapper input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+form button {
+    width: 100%;
+    height: 58px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background-color: var(--color-green);
+    border: 1px solid var(--color-green);
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px var(--color-dark-green);
+}
+
+form .input-wrapper>div:focus-within {
+    border: 1px solid var(--color-blue);
+}
+
+form .error>div {
+    border: 2px solid var(--color-red);
+}
+
+form .error img {
+    display: block;
+}
+
+form .error input::placeholder {
+    color: var(--color-red);
+}
+
+.container .right-section form .error>p {
+    color: var(--color-red);
+    font-style: italic;
+    text-align: right;
+    padding: 5px 0;
+}
+
+form p {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--color-grayish-blue);
+}
+
+form p>span {
+    font-weight: 600;
+    color: var(--color-red);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        overflow: scroll;
+    }
+
+    br {
+        display: inline;
+    }
+
+    main {
+        max-width: 375px;
+        padding: 60px 0;
+        /* height: 100%; */
+    }
+
+    .container {
+        grid-template-columns: none;
+        grid-template: 1fr 1fr;
+        padding: 0;
+        text-align: center;
+        gap: 50px;
+        /* text-wrap: wrap; */
+    }
+
+    .container .left-section {
+        gap: 20px;
+    }
+
+    .container .left-section h1 {
+        font-size: 30px;
+    }
+
+    .container .left-section>p {
+        font-size: 15px;
+    }
+
+    .container .right-section .try-section {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    form button {
+        font-size: 15px;
+    }
+}

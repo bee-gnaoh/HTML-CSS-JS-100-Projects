@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+
+  <main role="main">
+    <div class="container">
+      <div class="left-section">
+        <h1>Learn to code by watching others</h1>
+        <p> See how experienced developers solve <br> problems in real-time. Watching <br> scripted tutorials is great,
+          but <br>
+          understanding how developers think is <br> invaluable.</p>
+      </div>
+      <div class="right-section">
+        <div class="try-section">
+          <p><span>Try it free 7 days</span> then <br> $20/mo. thereafter</p>
+        </div>
+        <form>
+          <div class="input-wrapper">
+            <div>
+              <input type="text" alt="First Name" name="firstName" id="firstName" placeholder="First Name">
+              <img src='./images/icon-error.svg' alt="error icon">
+            </div>
+            <p></p>
+          </div>
+          <div class="input-wrapper">
+            <div>
+              <input type="text" alt="Last Name" name="lastName" id="lastName" placeholder="Last Name">
+              <img src='./images/icon-error.svg' alt="error icon">
+            </div>
+            <p></p>
+          </div>
+          <div class="input-wrapper">
+            <div>
+              <input type="email" alt="Email" name="email" id="email" placeholder="Email Address">
+              <img src='./images/icon-error.svg' alt="error icon">
+            </div>
+            <p></p>
+          </div>
+          <div class="input-wrapper">
+            <div>
+              <input type="password" alt="Password" name="password" id="password" placeholder="Password">
+              <img src='./images/icon-error.svg' alt="error icon">
+            </div>
+            <p></p>
+          </div>
+          <button id="submitBtn">CLAIM YOUR FREE TRIAL</button>
+          <p> By clicking the button, you are agreeing to <br> our <span>Terms and Services</span></p>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="./main.js"></script>
+</body>
+
+</html>
