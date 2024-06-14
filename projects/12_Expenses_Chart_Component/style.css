@@ -2,7 +2,9 @@
 
 :root {
     --color-soft-red: hsl(10, 79%, 65%);
+    --color-light-red: hsla(10, 79%, 65%, .5);
     --color-cyan: hsl(186, 34%, 60%);
+    --color-light-cyan: hsla(186, 34%, 60%, .5);
     --color-dark-brown: hsl(25, 47%, 15%);
     --color-cream: hsl(28, 10%, 53%);
     --color-light-cream: hsla(28, 10%, 53%, .5);
@@ -84,7 +86,7 @@ main {
 }
 
 .monthly-total p {
-    color: grey;
+    color: var(--color-cream);
     font-size: 18px;
 
 }
@@ -133,14 +135,40 @@ main {
 }
 
 .chart .chart-item .chart-item-value>div {
+    position: relative;
+    cursor: pointer;
     width: 100%;
-    /* height: calc(52.36 * 3px); */
     background-color: var(--color-soft-red);
     border-radius: 5px;
 }
 
+.chart .chart-item .chart-item-value>div:hover {
+    background-color: var(--color-light-red);
+}
+
+.chart .chart-item .chart-item-value>div>span {
+    visibility: hidden;
+    padding: 12px 8px;
+    border-radius: 5px;
+    background-color: var(--color-dark-brown);
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    margin-left: -33px;
+}
+
+.chart .chart-item .chart-item-value>div:hover>span {
+    visibility: visible;
+}
+
 .chart .highlight .chart-item-value>div {
     background-color: var(--color-cyan);
+}
+
+.chart .highlight .chart-item-value>div:hover {
+    background-color: var(--color-light-cyan);
 }
 
 @media screen and (max-width: 375px) {

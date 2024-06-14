@@ -11,14 +11,17 @@ async function init() {
     const chartItem = document.createElement('div');
     const chartItemValue = document.createElement('div');
     const chartValuePercent = document.createElement('div');
+    const chartValuePercentDetail = document.createElement('span');
     const chartItemLabel = document.createElement('p');
+
     chartItemLabel.classList.add('chart-item-label');
     chartItem.classList.add('chart-item');
     chartItemValue.classList.add('chart-item-value');
     if (data.amount === highlight) chartItem.classList.add('highlight');
     chartItemLabel.innerText = data.day;
     chartValuePercent.style.height = `calc(${data.amount} * 3px)`;
-
+    chartValuePercentDetail.innerText = `$${data.amount}`;
+    chartValuePercent.appendChild(chartValuePercentDetail);
     chartItemValue.appendChild(chartValuePercent);
     chartItem.appendChild(chartItemValue);
     chartItem.appendChild(chartItemLabel);
