@@ -54,4 +54,9 @@ const data = [
     title: 'Age Calculator App',
     preview: 'preview.jpg',
   },
+  {
+    path: '/12_Expenses_Chart_Component',
+    title: 'Expenses Chart Component',
+    preview: 'preview.jpg',
+  },
 ];

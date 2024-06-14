@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    --color-soft-red: hsl(10, 79%, 65%);
+    --color-cyan: hsl(186, 34%, 60%);
+    --color-dark-brown: hsl(25, 47%, 15%);
+    --color-cream: hsl(28, 10%, 53%);
+    --color-light-cream: hsla(28, 10%, 53%, .5);
+    --color-very-pale-orange: hsl(27, 66%, 92%);
+
+    --font-normal: 400;
+    --font-bold: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-very-pale-orange);
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balance-card {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.balance-card-header {
+    border-radius: 15px;
+    padding: 30px;
+    background-color: var(--color-soft-red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.balance-card-header .balance-card-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.balance-card-header span {
+    font-size: 18px;
+    font-weight: var(--font-normal);
+    color: var(--color-very-pale-orange);
+}
+
+.spending-chart {
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.monthly-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.monthly-total p {
+    color: grey;
+    font-size: 18px;
+
+}
+
+.monthly-total .monthly-total-amount p {
+    color: --color-cream;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.monthly-total .monthly-change p:first-child {
+    color: #000;
+    text-align: right;
+    font-weight: var(--font-bold);
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--color-light-cream);
+}
+
+.chart .chart-item {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.chart .chart-item .chart-item-value {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: end;
+}
+
+.chart .chart-item .chart-item-label {
+    font-weight: var(--font-normal);
+    font-size: 16px;
+    color: var(--color-cream);
+}
+
+.chart .chart-item .chart-item-value>div {
+    width: 100%;
+    /* height: calc(52.36 * 3px); */
+    background-color: var(--color-soft-red);
+    border-radius: 5px;
+}
+
+.chart .highlight .chart-item-value>div {
+    background-color: var(--color-cyan);
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        height: auto;
+        padding: 65px 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .balance-card {
+        width: 340px;
+    }
+
+    .balance-card-header {
+        padding: 25px 18px;
+    }
+
+    .balance-card-header span {
+        font-size: 16px;
+    }
+
+    .balance-card-logo {
+        max-width: 64px;
+    }
+
+    .spending-chart {
+        padding: 30px 18px;
+        gap: 28px
+    }
+
+    .chart {
+        padding-bottom: 28px;
+    }
+
+    .chart .chart-item {
+        width: 32px;
+        gap: 12px
+    }
+
+    .chart .chart-item .chart-item-label {
+        font-size: 12px;
+    }
+
+    .monthly-total .monthly-total-amount p {
+        font-size: 15px;
+    }
+}
