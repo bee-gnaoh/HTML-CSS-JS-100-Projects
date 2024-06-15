@@ -1,8 +1,12 @@
-const projects = document.querySelector('.projects');
-
 window.onload = init;
 
 async function init() {
+  const data = await fetch('public/js/data.json')
+    .then(res => res.json())
+    .catch(err => console.log(err));
+
+  if (!data) return;
+  const projects = document.querySelector('.projects');
   data.forEach(item => {
     projects.innerHTML += `
         <div>
