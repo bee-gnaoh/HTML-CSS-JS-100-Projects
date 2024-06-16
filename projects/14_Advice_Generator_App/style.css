@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --color-light-cyan: hsl(193, 38%, 86%);
+    --color-neon-green: hsl(150, 100%, 66%);
+    --shadow-neon-green: hsla(150, 100%, 66%, .3);
+    --color-grayish-blue: hsl(217, 19%, 38%);
+    --color-dark-grayish-blue: hsl(217, 19%, 24%);
+    --color-dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--color-dark-blue);
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 542px;
+    background-color: var(--color-dark-grayish-blue);
+    padding: 48px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    transition: all 1s ease;
+}
+
+.card .card-header {
+    font-size: 14px;
+    color: var(--color-neon-green);
+    font-weight: 800;
+    letter-spacing: 0.25em;
+}
+
+.card .card-header p {
+    transition: all 1s ease;
+}
+
+.card .card-content p {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+    quotes: initial;
+    transition: all 1s ease;
+}
+
+.card .card-action {
+    position: relative;
+}
+
+.card .card-action>div {
+    width: 444px;
+    height: 16px;
+    background-image: url(./images/pattern-divider-desktop.svg);
+    margin-bottom: 38px;
+}
+
+.card .card-action>button {
+    width: 68px;
+    height: 68px;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--color-neon-green);
+    cursor: pointer;
+    position: absolute;
+    right: 50%;
+    top: 100%;
+    margin-top: 15px;
+    margin-right: -35px;
+}
+
+.card .card-action>button:hover {
+    box-shadow: 0px 0px 8px 10px var(--shadow-neon-green);
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: 342px;
+        padding: 42px 22px;
+        gap: 30px;
+    }
+
+    .card .card-header {
+        font-size: 12px;
+    }
+
+    .card .card-content p {
+        font-size: 24px;
+    }
+
+    .card .card-action>div {
+        width: 295px;
+        background-image: url(./images/pattern-divider-mobile.svg);
+    }
+
+    .card .card-action>button {
+        width: 52px;
+        height: 52px;
+        margin-top: 17px;
+        margin-right: -28px;
+    }
+}

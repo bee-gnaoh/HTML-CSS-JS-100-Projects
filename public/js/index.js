@@ -1,13 +1,28 @@
-window.onload = init;
+const views = {};
 
-async function init() {
-  const data = await fetch('public/js/data.json')
+views.init = async function () {
+  if (!views.projects || views.projects.length === 0) {
+    await views.getProjects();
+  }
+};
+
+views.projects = [];
+
+views.getProjects = async function () {
+  const projects = await fetch('public/js/data.json')
     .then(res => res.json())
     .catch(err => console.log(err));
 
-  if (!data) return;
+  if (!projects) return;
+  console.log(projects);
+  views.projects = projects;
+  views.renderProjects();
+};
+
+views.renderProjects = function () {
   const projects = document.querySelector('.projects');
-  data.forEach(item => {
+  if (!views.projects) return;
+  for (const item of views.projects) {
     projects.innerHTML += `
         <div>
             <img src="./projects${item.path}/${item.preview}">
@@ -17,5 +32,7 @@ async function init() {
             </div>
         </div>
     `;
-  });
-}
+  }
+};
+
+window.onload = views.init;

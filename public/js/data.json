@@ -63,5 +63,10 @@
     "path": "/13_Time_Tracking_Dashboard",
     "title": "Time Tracking Dashboard",
     "preview": "preview.jpg"
+  },
+  {
+    "path": "/14_Advice_Generator_App",
+    "title": "Advice Generator App",
+    "preview": "preview.jpg"
   }
 ]
