@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Todo app</title>
+
+</head>
+
+<body>
+
+  <main>
+    <div class="container">
+      <div class="header">
+        <h1>TODO</h1>
+        <div id="toggleTheme"></div>
+      </div>
+      <div class="todo">
+        <div class="todo-create">
+          <div class="custom-checkbox">
+            <span></span>
+          </div>
+          <input name="create" type="text" placeholder="Create a new todo..." />
+        </div>
+        <div class="todo-list">
+        </div>
+        <div class="todo-action">
+          <div class="item-count">
+          </div>
+          <div class="item-filter">
+            <ul>
+              <li class="active">All</li>
+              <li>Active</li>
+              <li>Completed</li>
+            </ul>
+          </div>
+          <div class="item-clear" id="clearCompleted">
+            Clear Completed
+          </div>
+        </div>
+      </div>
+      <div class="drag">
+        <p>Drag and drop to reoder list</p>
+      </div>
+    </div>
+
+  </main>
+  <script src="./main.js"></script>
+</body>
+
+</html>

@@ -68,5 +68,10 @@
     "path": "/14_Advice_Generator_App",
     "title": "Advice Generator App",
     "preview": "preview.jpg"
+  },
+  {
+    "path": "/15_Todo_App",
+    "title": "Todo App",
+    "preview": "preview.jpg"
   }
 ]
