@@ -95,6 +95,7 @@ views.renderTasks = function (tasks = views.tasks, filter = views.filter) {
       event.preventDefault();
       completedEl.classList.toggle('checked');
       views.tasks[idx].completed = !views.tasks[idx].completed;
+      views.renderTasks();
     });
 
     item.addEventListener('dragstart', function (event) {
@@ -119,7 +120,8 @@ views.renderTasks = function (tasks = views.tasks, filter = views.filter) {
     let nextSibling = siblings.find(sibling => event.clientY <= sibling.offsetTop + sibling.offsetHeight / 2);
     todoListEl.insertBefore(draggingItem, nextSibling);
   });
-  countEl.innerText = `${_tasks.length} items left`;
+  const taskLeft = tasks.filter(el => !el.completed);
+  countEl.innerText = `${taskLeft.length} items left`;
 };
 
 views.setFilterTask = function () {
