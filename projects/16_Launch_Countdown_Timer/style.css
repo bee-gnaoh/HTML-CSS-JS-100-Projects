@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --color-grayish-blue: hsl(237, 18%, 59%);
+    --color-soft-red: hsl(345, 95%, 68%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-dark-desaturated-blue: hsl(236, 21%, 26%);
+    --color-very-dark-blue: hsl(235, 16%, 14%);
+    --color-very-very-dark-blue: hsl(234, 17%, 12%);
+
+    --bg-top-half: hsl(240, 21%, 22%);
+    --bg-light: hsl(272, 21%, 14%);
+    --bg-dark: hsl(240, 14%, 14%);
+
+    --box-shadow: 0 10px 0 0 hsl(0, 0%, 8%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 700;
+}
+
+@keyframes flip-top {
+    to {
+        transform: rotateX(90deg);
+    }
+}
+
+@keyframes flip-bottom {
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(var(--bg-dark), var(--bg-light));
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px;
+    background: url(./images/bg-stars.svg);
+    gap: 100px;
+}
+
+main .header {
+    color: var(--color-white);
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+main .header>p {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main .timer {
+    /* flex-grow: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.timer .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card>p {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--color-grayish-blue);
+}
+
+.card .flip-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem auto;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.card .flip-card .top-half,
+.card .flip-card .bottom-half {
+    position: relative;
+}
+
+.card .flip-card .top-half,
+.card .flip-card .bottom-half,
+.card .flip-card .top-flip,
+.card .flip-card .bottom-flip {
+    color: var(--color-soft-red);
+    font-size: 74px;
+    width: 150px;
+    height: calc(144px / 2);
+    padding: 23px 7px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card .flip-card .top-half,
+.card .flip-card .top-flip {
+    color: var(--color-soft-red);
+    border-radius: 5px 5px 0 0;
+    background-color: var(--bg-top-half);
+}
+
+.card .flip-card .top-half::before,
+.card .flip-card .top-flip::before {
+    content: '';
+    background-color: var(--color-very-very-dark-blue);
+    left: -5px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.card .flip-card .top-half::after,
+.card .flip-card .top-flip::after {
+    content: '';
+    background-color: var(--color-very-very-dark-blue);
+    right: -5px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.card .flip-card .bottom-half,
+.card .flip-card .bottom-flip {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--color-soft-red);
+    border-radius: 0 0 5px 5px;
+    background-color: var(--color-dark-desaturated-blue);
+}
+
+.card .flip-card .bottom-half::before,
+.card .flip-card .bottom-flip::before {
+    content: '';
+    background-color: var(--color-very-very-dark-blue);
+    left: -5px;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.card .flip-card .bottom-half::after,
+.card .flip-card .bottom-flip::after {
+    content: '';
+    background-color: var(--color-very-very-dark-blue);
+    right: -5px;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.bottom-flip {
+    position: absolute;
+    bottom: 0;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    animation: flip-bottom 0.5s ease-out 0.5s;
+}
+
+.top-flip {
+    position: absolute;
+    transform-origin: bottom;
+    transform: rotateX(0deg);
+    animation: flip-top 0.5s ease-in forwards;
+}
+
+footer {
+    width: 100%;
+    height: 197px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-image: url(./images/pattern-hills.svg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+footer svg:hover path {
+    fill: var(--color-soft-red);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        max-width: 375px;
+        padding: 0 25px;
+    }
+
+    main {
+        padding-top: 145px;
+        height: 100%;
+        gap: 55px;
+
+    }
+
+    main .timer {
+        gap: 16px;
+    }
+
+    .card>p {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .card .flip-card .top-half,
+    .card .flip-card .bottom-half,
+    .card .flip-card .top-flip,
+    .card .flip-card .bottom-flip {
+        color: var(--color-soft-red);
+        font-size: 35px;
+        width: 70px;
+        height: 35px;
+        padding: 23px 7px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .card .flip-card .top-half::after,
+    .card .flip-card .top-flip::after {
+        content: '';
+        background-color: var(--color-very-very-dark-blue);
+        right: -5px;
+        bottom: -5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        position: absolute;
+    }
+
+}

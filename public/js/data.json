@@ -73,5 +73,10 @@
     "path": "/15_Todo_App",
     "title": "Todo App",
     "preview": "preview.jpg"
+  },
+  {
+    "path": "/16_Launch_Countdown_Timer",
+    "title": "Launch Countdown Timer",
+    "preview": "preview.jpg"
   }
 ]
